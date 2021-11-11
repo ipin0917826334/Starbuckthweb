@@ -1,0 +1,1387 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Tea at Home - Starbucks Thailand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/bfe9f65d3d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="/starbucks.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+    <style>
+        
+        * {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            -webkit-scroll-behavior: smooth;
+        }
+
+        .scroll-to {
+            width: 100%;
+        }
+
+        .sticky-container {
+            height: 100%;
+            overflow: unset;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+        }
+
+        .links a i {
+            padding: 1em 1em;
+            color: black;
+
+        }
+
+        .links a i span {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .links a i:hover {
+            color: #006341;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            align-items: flex-start;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        nav img {
+            padding-left: 1em;
+            width: 7%;
+            height: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            margin-left: 25px;
+            vertical-align: bottom;
+        }
+
+        nav ul li {
+            padding: 0 .8em;
+            list-style-type: none;
+            margin-left: -23px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.2vh;
+            color: black;
+            margin: 0 20px 0 0;
+            float: left;
+        }
+
+        nav ul li a:hover {
+            color: #006341;
+            border-bottom: 3px solid #006341;
+        }
+
+        .crop {
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .link {
+            font-size: 14px;
+            font-weight: lighter;
+            text-indent: 50px;
+            letter-spacing: 0.8px;
+            color: rgb(122, 122, 122);
+        }
+
+        .link:visited {
+            color: rgb(122, 122, 122);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .link_f {
+            font-size: 10px;
+        }
+
+        .link_f:visited {
+            color: rgb(153, 153, 153);
+        }
+
+        .link_f:hover {
+            color: rgb(204, 201, 201);
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 100%;
+            background-color: rgb(0, 0, 0) !important;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators [data-bs-target]:visited {
+            background-color: rgb(121, 118, 118);
+        }
+
+        .carousel-indicators [data-bs-target]:hover {
+            background-color: rgb(58, 58, 58);
+        }
+
+        .carousel-indicators [data-bs-target]:active {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .menu-top {
+            margin-bottom: -40px;
+            margin-left: 42px;
+        }
+
+        .logo {
+            position: static;
+            width: 5.5%;
+            min-width: 95px;
+            cursor: pointer;
+            margin-left: 14%;
+        }
+
+        .logo1 {
+            position: static;
+            width: 0%;
+            padding: 0.5%;
+            min-width: 50px;
+            cursor: pointer;
+        }
+
+        .menu-foot {
+            margin-bottom: -20px;
+        }
+
+        footer {
+            overflow: hidden;
+        }
+
+        .jil {
+            transform: scale(0.98);
+        }
+
+        .jil2 {
+            transform: scale(1.1);
+        }
+
+        .but1 {
+            background: none;
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .but1:hover {
+            transition: 600ms;
+            border: 2px solid silver;
+            background-color: silver;
+            color: rgb(255, 255, 255);
+
+        }
+
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+        #accordion .card-header button[aria-expanded="true"]:before {
+            font-family: 'Material Icons';
+            content: "expand_less";
+            vertical-align: middle;
+        }
+
+        #accordion .card-header button[aria-expanded="false"]:before {
+            font-family: 'Material Icons';
+            content: "expand_more";
+            vertical-align: middle;
+        }
+
+        .btn-link {
+            text-decoration: none !important;
+        }
+
+        @media only screen and (max-width: 849px) {
+            .links {
+                display: none;
+            }
+
+            .menu-top {
+                display: none;
+            }
+
+            .logo {
+                position: static;
+                width: 5.5%;
+                min-width: 95px;
+                cursor: pointer;
+                margin-left: 0;
+            }
+
+            .absolute-footer {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        html {
+            scroll-padding-top: 82px;
+            /* height of sticky header */
+        }
+
+        #leftCol {
+            width: 25%;
+        }
+
+        .navbar-fixed-top-again {
+            top: 1070px;
+            z-index: 1031;
+        }
+
+        .affix {
+            position: fixed !important;
+            top: 85;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .affix+.container-fluid {
+            padding-top: 70px;
+        }
+
+        .big {
+            transition: all 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .scrolltop {
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .big:hover {
+            transform: scale(1.04);
+        }
+
+        .scaler {
+            transform: scale(1.125);
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            margin-bottom: 10%;
+        }
+
+        .hidec {
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header class="shadow" style="position: fixed; top: 0; width: 100%; z-index: 9999;">
+            <nav>
+                <img class="logo" onclick="window.location.href='index.html'" src="img/starbucks-logo-0.png">
+                <ul class="menu-top">
+                    <br id="space">
+                    <li><a href="athome.html">COFFEE & TEA AT HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="merchandise.html">MERCHANDISE</a></li>
+                    <li><a href="#">STARBUCKS REWARDS</a></li>
+                </ul>
+            </nav>
+            <div class="links mt-3" style="margin-right: 300px; font-size: 1.5vh;">
+                <a href="findstore.html"><i class="fa fa-map-marker">&nbsp; <span>Find a Store</span></i></a><span
+                    class="mt-2"><strong>|&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
+                <span class="mt-2" style="margin-top: 100px;"><a href="#" class="link"><img
+                            src="img/th.png">&nbsp;&nbsp;ไทย</a></span>
+            </div>
+        </header>
+        <div style="height: 79px;"></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators ">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#w3"><img src="img/reserve-coffee-2-1200x800.jpg" class="d-block w-100 crop" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="story.html">
+                        <img src="img/reverse2.png" class="d-block w-100 crop" alt="...">
+                </div></a>
+                <div class="carousel-item">
+                    <a href="#"><img src="img/reverse1.png" class="d-block w-100 crop" alt="..."></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" class="carotop" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="margin-bottom:0;">
+                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" class="carotop" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="margin-bottom:0;">
+                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div style="padding-top:30px;"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <a class="textchange1" href="#filters" data-bs-toggle="collapse" aria-expanded="false"
+                        aria-controls="filters" style="color: rgb(0, 0, 0); font-weight: 200;"
+                        onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#000'"><u>Show Filters</u></a>
+                </div>
+                <div class="col-7">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button class="input-group-text">
+                                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    width="24px">
+                                    <path
+                                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <hr class="m-3">
+                </div>
+            </div>
+
+        </div>
+        <div class="collapse" id="filters">
+            <div class="container">
+                <div class="row" style="font-size: 14px; font-weight: 200;">
+                    <div class="col-2 p-0" style="margin-left: 22%;">
+                        <h4 style="font-size:13px;"><strong>FORMAT</strong></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Whole Bean
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Origami™
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                VIA™
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 p-0">
+                        <h4 style="font-size:13px;"><strong>ROAST</strong></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Blonde
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Medium
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Dark
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 p-0">
+                        <h4 style="font-size:13px;"><strong>CAFFEINE</strong></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Decaf
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Regular
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 p-0">
+                        <h4 style="font-size:13px;"><strong>FORMAT</strong></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Africa
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Asia-Pacific
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Latin America
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Multi-region
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Single Origin
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container pb-5">
+            <br>
+
+            <!-- <div class="row">
+                <div class="col-3">
+                    <div>
+                        <div>
+                            <div class="sidebar">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w1">Retail</a></li>
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#">Employee Privacy Notice</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="sticky-container">
+                        <div class="sticky-top" style="top: 13%;">
+                            <div class="border shadow-sm" style="padding: 15px 20px;">
+                                <div class="list-group list-group-flush">
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w1">Highlight Coffee</a></li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <a href="#w2" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Whole
+                                                    Bean</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="accordion accordion-flush" id="acc">
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header" id="bean"
+                                                            data-bs-toggle="collapse" data-bs-target="#bean1"
+                                                            aria-expanded="false" aria-controls="bean1">
+                                                            <div class="collapsed accordion-button p-0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="bean1" class="accordion-collapse collapse" aria-labelledby="bean"
+                                            data-bs-parent="#acc">
+                                            <div class="accordion-body">
+                                                <a href="#w3" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Starbucks Reserve™</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w4">Starbucks VIA™</a></li>
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w5">Starbucks Origami™</a></li>
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w6">Teavana®</a></li>
+                                    <li class="list-group-item border-bottom-0"><a
+                                            style="color: #aaa; font-weight: 200;" onMouseOver="this.style.color='#000'"
+                                            onMouseOut="this.style.color='#aaa'" href="#w7">Syrup</a></li>
+                                    </ul>
+
+                                </div>
+                            </div><br>
+                            <p style="font-size: 14px; font-weight: 250;">Price and product availability may vary in
+                                some stores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <div class="row">
+                        <h4 id="w1">Highlight Coffee</h4>
+                        <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Christmas_Starbucks®-Christmas-Blend-2021.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks® Christmas Blend 2021</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>650 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Christmas_VIA-Christmas-Blend.jpg" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Christmas Blend 2021</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>450 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Christmas_Starbucks-Origami-Christmas-Blend-6-Cups.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Origami™ Christmas Blend 2021</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>400 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Christmas_Starbucks-Origami-Bag.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Origami™ Christmas 2021 Set (10
+                                                        Sachet)</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>800 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Christmas_Starbucks-Christmas-Blend-Blonde-Roast.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks® Christmas Blend Blonde Roast 2021</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>650 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Christmas_Starbucks-Christmas-Blend-Espresso-Roast-2021.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks® Christmas Blend Espresso Roast 2021</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>650 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 id="w2">Whole Bean</h4>
+                        <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Veranda-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks® Veranda Blend™</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>545 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/2-BF-blend2-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Breakfast Blend</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>545 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/3-Colombia2-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Colombia</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>595 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/9-Ethiopia2-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Ethiopia</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>595 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Guatemala-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Guatemala Antigua</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>800 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/5-House-blend2-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>House Blend</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>545 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 id="w3">Starbucks Reserve™</h4>
+                        <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big scaler"
+                                                        src="img/item/Christmas_STARBUCKS-RESERVETM-Bolivia-Sol-De-La-_Manana.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Reserve™ Bolivia Sol De La Mañana</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>1,200 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big scaler"
+                                                        src="img/item/Christmas_STARBUCKS-RESERVETM-Rwanda-Sholi.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Reserve™ Rwanda Sholi</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>850 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big scaler"
+                                                        src="img/item/Christmas_STARBUCKS-RESERVETM-ZAMBIA-ISENYA-ESTATE.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Reserve™ Zambia Isenya Estate</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>850 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big scaler"
+                                                        src="img/item/Christmas_STARBUCKS-RESERVETM-Christmas-2021.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Reserve™ Christmas 2021</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>850 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big scaler"
+                                                        src="img/item/Christmas_STARBUCKS-RESERVETM-Bolivia-Sol-De-La-_Manana.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Reserve™ Bolivia Sol De La Mañana</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>1,200 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big scaler"
+                                                        src="img/item/Christmas_STARBUCKS-RESERVETM-Rwanda-Sholi.jpg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Reserve™ Rwanda Sholi</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>850 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 id="w4">Starbucks VIA™</h4>
+                        <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Via-Pike-Place-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Pike Place® Roast</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>350 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Via-Italian-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Italian Roast</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>350 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Via-Iced-Tin-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Iced Coffee</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>150 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Via-Iced-Box-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Iced Coffee Tin BOX 15CT</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>450 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Via-Caramel-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Caramel</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>225 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Via-Caffe-Mocha-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks VIA™ Caffè Mocha</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>225 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel4"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4 id="w5">Starbucks Origami™</h4>
+                        <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Origami-Pike-Place-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Pike Place® Roast 6 Cups</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>350 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Origami-Verona-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Starbucks Caffè Verona™ 6 Cups</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>350 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div><br><br>
+
+
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel5" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 id="w6">Teavana®</h4>
+                        <div id="carousel6" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Earl-Grey-Teavana-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Earl Grey</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>465 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Emporer_s-Clouds-_-Mist-1080.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Emperor’s Clouds & Mist</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>520 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/English-BF-Teavana-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>English Breakfast</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>465 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><br><br>
+
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel6" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 id="w7">Syrup</h4>
+                        <div id="carousel7" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Caramel-Syrup-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Caramel Flavoured Syrup</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>180 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Hazelnut-Syrup-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Hazelnut Flavoured Syrup</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>180 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Vanilla-Syrup-1080.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Vanilla Flavoured Syrup</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>180 Baht</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel7" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <br>
+    <footer>
+        <div class="row row-cols-4" style="background-color: #f7f7f7;">
+            <div class="col pb-4 pt-4 d-flex justify-content-center">
+                <div class="menu-container">
+                    <span class="title"><strong>ABOUT US</strong></span>
+                    <ul class="list-unstyled">
+                        <li><a class="link" href="heritage.html">Our Heritage</a></li>
+                        <li><a class="link" href="company.html">Our Company</a></li>
+                        <li><a class="link" href="responsibility.html">Responsibility</a></li>
+                        <li><a class="link" href="career.html">Career Center</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col pb-0 pt-4 d-flex justify-content-center">
+                <div class="menu-container">
+                    <span class="title"><strong>COFFEE & TEA AT HOME</strong></span>
+                    <ul class="list-unstyled">
+                        <li><a class="link" href="story.html">Coffee Story</a></li>
+                        <li><a class="link" href="athome.html">Coffee & Tea at Home</a></li>
+                        <li><a class="link" href="howto.html">How to Brew</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col pb-0 pt-4 d-flex justify-content-center">
+                <div class="menu-container">
+                    <ul class="list-unstyled">
+                        <li><a class="link" href="#">STARBUCKS REWARDS</a></li>
+                        <li><a class="link" href="#">PROMOTION</a></li>
+                        <li><a class="link" href="#">STARBUCKS CARD CORPORATE SALE</a></li>
+                        <li><a class="link" href="#">ADDITIONAL INFORMATION</a></li>
+                        <li><a class="link" href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col pb-0 pt-4">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" class="link"><img
+                                src="img/us-18.png">&nbsp;&nbsp;English</a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="#" class="link"><img src="img/th.png">&nbsp;&nbsp;ไทย</a>
+                    </div>
+                </div>
+            </div>
+            <hr style="width:100%; color:rgb(197, 196, 196);">
+        </div>
+        <div style="background-color: #f7f7f7;">
+            <div class="d-flex justify-content-end container" style="background-color: #f7f7f7; padding-left: 50%;">
+                <div>
+                    <a href="https://www.facebook.com/StarbucksThailand/"><img class="pb-3" src="img/facebook_w-2.png"
+                            style="width:8%"></a>&nbsp;&nbsp;
+                    <a href="https://www.instagram.com/starbucksthailand/"><img class="pb-3" src="img/Instagram.png"
+                            style="width:8%"></a>&nbsp;&nbsp;
+                    <a href="https://page.line.me/853tzvmu?openQrModal=true"><img class="pb-3" src="img/LINE_APP.png"
+                            style="width:8%"></a>&nbsp;&nbsp;
+                    <a href="https://apps.apple.com/th/app/starbucks-thailand/id898062370"><img class="pb-3"
+                            src="img/app-store_tcm78-10560_w1024_n.png" style="width:26%"></a>&nbsp;&nbsp;
+                    <a href="https://play.google.com/store/apps/details?id=com.starbucks.thailand"><img class="pb-3"
+                            src="img/google-play_tcm78-10559_w1024_n.png" style="width:26%"></a>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute-footer w-100" style="background-color: #5b5b5b; position: absolute;">
+            <div class="container text-center" style="padding: 10px 0 15px; font-size: .85em; overflow: hidden;">
+                <div class="row flex-column-reverse flex-lg-row align-content-center">
+                    <div class="col-auto mt-4" style="padding-left: 18px;">
+                        <div class="menu-container align-self-baseline">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a class="link link_f" href="accessibility.html">WEB
+                                        ACCESSIBILITY</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="privacy.html">PRIVACY
+                                        STATEMENT</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="terms.html">TERMS OF
+                                        USE</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="#">SITE MAP</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="#">COOKIE PREFERENCE</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col mt-4 text-center text-lg-end align-self-baseline"
+                        style="color: rgb(153, 153, 153); font-size: 14px; padding-right: 20px;">
+                        <span>©2021 Coffee Concepts Retail Co.,Ltd. All rights reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a class="scrolltop">
+        <img src="img/up.png" width="35px" alt="">
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+<script>
+    $(".scrolltop").click(function () {
+        $("html, body").animate({ scrollTop: 0 });
+        return false;
+    });
+    $(document).ready(function () {
+        $(".textchange1").click(function () {
+            $(".textchange1").text(($(".textchange1").text() == "Show Filters") ? "Hide Filters" : "Show Filters");
+            $(this).addClass("hidec");
+        })
+    });
+</script>
+</html>

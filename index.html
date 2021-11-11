@@ -23,7 +23,9 @@
             margin: 0;
             overflow: auto;
         }
-
+        div{
+            overflow: hidden;
+        }
         a {
             text-decoration: none;
 
@@ -162,15 +164,16 @@
             margin-bottom: -40px;
             margin-left: 42px;
         }
+        .big{
+            transition: all 0.5s ease-in-out;
 
+        }
         .big:hover {
-            transition: 700ms;
-            transform: scale(1.05);
+            transform: scale(1.2);
         }
 
         .logo {
             position: static;
-            width: 5.5%;
             min-width: 95px;
             cursor: pointer;
             margin-left: 14%;
@@ -218,27 +221,25 @@
 
 <body>
     <div style="overflow: hidden;">
-        <header class="shadow">
+        <header class="shadow" style="position: fixed; top: 0; width: 100%; z-index: 9999;">
             <nav>
-                <button onclick="window.location.href='index.html'"
-                    style="width:8.6%; margin-left: 12.5%; padding: 0; border: none; background: none; overflow:hidden"><img
-                        class="logo" src="img/starbucks-logo-0.png"></img></button>
+                <img class="logo" onclick="window.location.href='index.html'" src="img/starbucks-logo-0.png">
                 <ul class="menu-top">
                     <br id="space">
-                    <li><a href="#">COFFEE & TEA AT HOME</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">MERCHANDISE</a></li>
+                    <li><a href="athome.html">COFFEE & TEA AT HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="merchandise.html">MERCHANDISE</a></li>
                     <li><a href="#">STARBUCKS REWARDS</a></li>
                 </ul>
             </nav>
             <div class="links mt-3" style="margin-right: 300px; font-size: 1.5vh;">
-                <a href="#"><i class="fa fa-map-marker">&nbsp; <span>Find a Store</span></i></a><span
+                <a href="findstore.html"><i class="fa fa-map-marker">&nbsp; <span>Find a Store</span></i></a><span
                     class="mt-2"><strong>|&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
                 <span class="mt-2" style="margin-top: 100px;"><a href="#" class="link"><img
                             src="img/th.png">&nbsp;&nbsp;ไทย</a></span>
             </div>
         </header>
-
+        <div style="height: 79px;"></div>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators ">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -247,10 +248,12 @@
                     aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/reserve-coffee-2-1200x800.jpg" class="d-block w-100 crop" alt="...">
+                    <img src="img/spark1.png" class="d-block w-100 crop" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="img/reserve.png" class="d-block w-100 crop" alt="...">
@@ -259,6 +262,9 @@
                     <a
                         href="https://shopee.co.th/starbucks_official?c=s457331406_SS_TH_OTHR_ButtonOnWebsite&pid=websitebutton&smtt=9&utm_campaign=s457331406_SS_TH_OTHR_ButtonOnWebsite&utm_content=StarbucksXShopee&utm_medium=seller&utm_source=WebsiteButton"><img
                             src="img/reserve_shoppee.png" class="d-block w-100 crop" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/reserve-coffee-2-1200x800.jpg" class="d-block w-100 crop" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -275,41 +281,45 @@
         <div class="container">
             <br>
             <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feel-Good Flavors</h4>
-            <div class="row">
+            <div class="row" style="overflow: hidden;">
                 <div class="col-6">
-                    <div class="big">
-                        <a href="#"><img src="img/Aim_Web1080_Bev.jpeg" class="d-block w-100"></a>
+                    <div>
+                        <a href="#"><img class="big" src="img/Christmas_Web1080_Bev.jpg" class="d-block" width="100%"></a>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="big">
-                        <a href="#"><img src="img/Food_Autumn_Web1080x1080.jpg" class="d-block w-100"><br></a>
+                    <div>
+                        <a href="#"><img  class="big" src="img/Food_Christmas_Web1080x1080.jpg" class="d-block" width="100%"><br></a>
                     </div>
-                    <div class="big">
-                        <a href="#"><img src="img/Aim_Web1080_Coffee.jpg" class="d-block w-100"></a>
+                    <br>
+                    <div>
+                        <a href="#"><img  class="big" src="img/Christmas_Web1080_Coffee.jpg" class="d-block" width="100%"></a>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="big">
-                        <a href="#"><img src="img/MerP1_Autumn_Web.png" class="d-block w-100"><br></a>
+                    <div>
+                        <a href="#"><img  class="big" src="img/MerP1_Christmas_WebHilight1080.jpg" class="d-block" width="100%"><br></a>
                     </div>
-                    <div class="big">
-                        <a href="#"><img src="img/Aim_Web1080_CoffeeR.jpg" class="d-block w-100"><br></a>
+                    <br>
+                    <div>
+                        <a href="#"><img  class="big" src="img/Christmas_Web1080_CoffeeR.jpg" class="d-block" width="100%"><br></a>
                     </div>
                 </div>
             </div>
+            <br>
             <div class="row">
                 <a href="#"><img src="img/mop-banner-en.png" class="d-block w-100"></a>
             </div>
         </div>
         <br>
-        <div class="row row-cols-4 mb-0 pb-0" style="background-color: #f7f7f7;">
+        <footer>
+        <div class="row row-cols-4" style="background-color: #f7f7f7;">
             <div class="col pb-4 pt-4 d-flex justify-content-center">
                 <div class="menu-container">
                     <span class="title"><strong>ABOUT US</strong></span>
                     <ul class="list-unstyled">
                         <li><a class="link" href="heritage.html">Our Heritage</a></li>
-                        <li><a class="link" href="company.html">Our Conpany</a></li>
+                        <li><a class="link" href="company.html">Our Company</a></li>
                         <li><a class="link" href="responsibility.html">Responsibility</a></li>
                         <li><a class="link" href="career.html">Career Center</a></li>
                     </ul>
@@ -320,9 +330,9 @@
                 <div class="menu-container">
                     <span class="title"><strong>COFFEE & TEA AT HOME</strong></span>
                     <ul class="list-unstyled">
-                        <li><a class="link" href="#">Coffee Story</a></li>
-                        <li><a class="link" href="#">Coffee & Tea at Home</a></li>
-                        <li><a class="link" href="#">How to Brew</a></li>
+                        <li><a class="link" href="story.html">Coffee Story</a></li>
+                        <li><a class="link" href="athome.html">Coffee & Tea at Home</a></li>
+                        <li><a class="link" href="howto.html">How to Brew</a></li>
                     </ul>
                 </div>
             </div>
@@ -350,22 +360,22 @@
             </div>
             <hr style="width:100%; color:rgb(197, 196, 196);">
         </div>
-
-        <div class="d-flex justify-content-end" style="background-color: #f7f7f7;">
+        <div style="background-color: #f7f7f7;" >
+        <div class="d-flex justify-content-end container" style="background-color: #f7f7f7; padding-left: 50%;">
             <div>
-                <a href="https://www.facebook.com/StarbucksThailand/"><i class="fa fa-facebook-square"
-                        style="font-size:48px;color:rgb(35, 111, 211)"></i></a>&nbsp;&nbsp;
-                <a href="https://www.instagram.com/starbucksthailand/"><i class="fa fa-instagram"
-                        style="font-size:48px; color:rgb(225,48,108)"></i></a>&nbsp;&nbsp;
-                <a href="https://page.line.me/853tzvmu?openQrModal=true"><i class="fab fa-line"
-                        style="font-size:48px; color:rgb(12, 211, 88)"></i></a>&nbsp;&nbsp;
-                <a href="https://apps.apple.com/th/app/starbucks-thailand/id898062370"><i class="fa fa-apple"
-                        style="font-size:48px;color:rgb(70, 71, 71)"></i></a>&nbsp;&nbsp;
-                <a href="https://play.google.com/store/apps/details?id=com.starbucks.thailand"><i
-                        class="fab fa-google-play" style="font-size:44px;color:rgb(12, 211, 88)"></i></a>&nbsp;&nbsp;
+                <a href="https://www.facebook.com/StarbucksThailand/"><img class="pb-3" src="img/facebook_w-2.png"
+                        style="width:8%"></a>&nbsp;&nbsp;
+                <a href="https://www.instagram.com/starbucksthailand/"><img class="pb-3" src="img/Instagram.png"
+                    style="width:8%"></a>&nbsp;&nbsp;
+                <a href="https://page.line.me/853tzvmu?openQrModal=true"><img class="pb-3" src="img/LINE_APP.png"
+                    style="width:8%"></a>&nbsp;&nbsp;
+                <a href="https://apps.apple.com/th/app/starbucks-thailand/id898062370"><img class="pb-3" src="img/app-store_tcm78-10560_w1024_n.png"
+                    style="width:26%"></a>&nbsp;&nbsp;
+                <a href="https://play.google.com/store/apps/details?id=com.starbucks.thailand"><img class="pb-3" src="img/google-play_tcm78-10559_w1024_n.png"
+                    style="width:26%"></a>&nbsp;&nbsp;
             </div>
         </div>
-
+    </div>
 
         <div class="absolute-footer w-100" style="background-color: #5b5b5b; position: absolute;">
             <div class="container text-center" style="padding: 10px 0 15px; font-size: .85em; overflow: hidden;">
@@ -373,9 +383,9 @@
                     <div class="col-auto mt-4" style="padding-left: 18px;">
                         <div class="menu-container align-self-baseline">
                             <ul class="list-inline">
-                                <li class="list-inline-item"><a class="link link_f" href="#">WEB ACCESSIBILITY</a></li>
-                                <li class="list-inline-item"><a class="link link_f" href="#">PRIVACY STATEMENT</a></li>
-                                <li class="list-inline-item"><a class="link link_f" href="#">TERMS OF USE</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="accessibility.html">WEB ACCESSIBILITY</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="privacy.html">PRIVACY STATEMENT</a></li>
+                                <li class="list-inline-item"><a class="link link_f" href="terms.html">TERMS OF USE</a></li>
                                 <li class="list-inline-item"><a class="link link_f" href="#">SITE MAP</a></li>
                                 <li class="list-inline-item"><a class="link link_f" href="#">COOKIE PREFERENCE</a></li>
                             </ul>

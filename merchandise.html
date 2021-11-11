@@ -1,0 +1,2457 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise - Starbucks Thailand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/bfe9f65d3d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="/starbucks.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            -webkit-scroll-behavior: smooth;
+        }
+
+        .scroll-to {
+            width: 100%;
+        }
+
+        .sticky-container {
+            height: 100%;
+            overflow: unset;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+        }
+
+        .links a i {
+            padding: 1em 1em;
+            color: black;
+
+        }
+
+        .links a i span {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .links a i:hover {
+            color: #006341;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            align-items: flex-start;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        nav img {
+            padding-left: 1em;
+            width: 7%;
+            height: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            margin-left: 25px;
+            vertical-align: bottom;
+        }
+
+        nav ul li {
+            padding: 0 .8em;
+            list-style-type: none;
+            margin-left: -23px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.2vh;
+            color: black;
+            margin: 0 20px 0 0;
+            float: left;
+        }
+
+        nav ul li a:hover {
+            color: #006341;
+            border-bottom: 3px solid #006341;
+        }
+
+        .crop {
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .link {
+            font-size: 14px;
+            font-weight: lighter;
+            text-indent: 50px;
+            letter-spacing: 0.8px;
+            color: rgb(122, 122, 122);
+        }
+
+        .link:visited {
+            color: rgb(122, 122, 122);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .link_f {
+            font-size: 10px;
+        }
+
+        .link_f:visited {
+            color: rgb(153, 153, 153);
+        }
+
+        .link_f:hover {
+            color: rgb(204, 201, 201);
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 100%;
+            background-color: rgb(0, 0, 0) !important;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators [data-bs-target]:visited {
+            background-color: rgb(121, 118, 118);
+        }
+
+        .carousel-indicators [data-bs-target]:hover {
+            background-color: rgb(58, 58, 58);
+        }
+
+        .carousel-indicators [data-bs-target]:active {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .menu-top {
+            margin-bottom: -40px;
+            margin-left: 42px;
+        }
+
+        .logo {
+            position: static;
+            width: 5.5%;
+            min-width: 95px;
+            cursor: pointer;
+            margin-left: 14%;
+        }
+
+        .logo1 {
+            position: static;
+            width: 0%;
+            padding: 0.5%;
+            min-width: 50px;
+            cursor: pointer;
+        }
+
+        .menu-foot {
+            margin-bottom: -20px;
+        }
+
+        footer {
+            overflow: hidden;
+        }
+
+        .jil {
+            transform: scale(0.98);
+        }
+
+        .jil2 {
+            transform: scale(1.1);
+        }
+
+        .but1 {
+            background: none;
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .but1:hover {
+            transition: 600ms;
+            border: 2px solid silver;
+            background-color: silver;
+            color: rgb(255, 255, 255);
+
+        }
+
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+        #accordion .card-header button[aria-expanded="true"]:before {
+            font-family: 'Material Icons';
+            content: "expand_less";
+            vertical-align: middle;
+        }
+
+        #accordion .card-header button[aria-expanded="false"]:before {
+            font-family: 'Material Icons';
+            content: "expand_more";
+            vertical-align: middle;
+        }
+
+        .btn-link {
+            text-decoration: none !important;
+        }
+
+        @media only screen and (max-width: 849px) {
+            .links {
+                display: none;
+            }
+
+            .menu-top {
+                display: none;
+            }
+
+            .logo {
+                position: static;
+                width: 5.5%;
+                min-width: 95px;
+                cursor: pointer;
+                margin-left: 0;
+            }
+
+            .absolute-footer {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        html {
+            scroll-padding-top: 82px;
+            /* height of sticky header */
+        }
+
+        #leftCol {
+            width: 25%;
+        }
+
+        .navbar-fixed-top-again {
+            top: 1070px;
+            z-index: 1031;
+        }
+
+        .affix {
+            position: fixed !important;
+            top: 85;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .affix+.container-fluid {
+            padding-top: 70px;
+        }
+
+        .big {
+            transition: all 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .big:hover {
+            transform: scale(1.05);
+        }
+
+        .scrolltop {
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .big:hover {
+            transform: scale(1.07);
+        }
+
+        .scaler {
+            transform: scale(1.125);
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            margin-bottom: 10%;
+        }
+
+        .hidec {
+            border-bottom: 1px solid black;
+        }
+
+        /* .collapse,
+        .collapsing {
+            overflow: auto;
+            max-height: 20v;
+        } */
+
+        #sb::-webkit-scrollbar {
+            width: 12px;
+            background-color: #fff;
+        }
+
+        #sb::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #ccc;
+        }
+
+        #sb::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header class="shadow" style="position: fixed; top: 0; width: 100%; z-index: 9999;">
+            <nav>
+                <img class="logo" onclick="window.location.href='index.html'" src="img/starbucks-logo-0.png">
+                <ul class="menu-top">
+                    <br id="space">
+                    <li><a href="athome.html">COFFEE & TEA AT HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="merchandise.html">MERCHANDISE</a></li>
+                    <li><a href="#">STARBUCKS REWARDS</a></li>
+                </ul>
+            </nav>
+            <div class="links mt-3" style="margin-right: 300px; font-size: 1.5vh;">
+                <a href="findstore.html"><i class="fa fa-map-marker">&nbsp; <span>Find a Store</span></i></a><span
+                    class="mt-2"><strong>|&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
+                <span class="mt-2" style="margin-top: 100px;"><a href="#" class="link"><img
+                            src="img/th.png">&nbsp;&nbsp;ไทย</a></span>
+            </div>
+        </header>
+        <div style="height: 79px;"></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators ">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#"><img src="img/joyful.png" class="d-block crop w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="img/alice.png" class="d-block crop w-100" alt="...">
+                </div></a>
+            </div>
+            <button class="carousel-control-prev" class="carotop" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="margin-bottom:0;">
+                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" class="carotop" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="margin-bottom:0;">
+                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div style="padding-top:30px;"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-2">
+                </div>
+                <div class="col-7">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button class="input-group-text">
+                                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    width="24px">
+                                    <path
+                                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <hr class="m-3">
+                </div>
+            </div>
+
+        </div>
+        <div class="container pb-5">
+            <br>
+
+            <!-- <div class="row">
+                <div class="col-3">
+                    <div>
+                        <div>
+                            <div class="sidebar">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w1">Retail</a></li>
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#">Employee Privacy Notice</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="sticky-container">
+                        <div class="sticky-top" style="top: 13%; ">
+                            <div id="sb" class="border shadow-sm overflow-auto"
+                                style="padding: 15px 20px; max-height: 400px;">
+                                <a href="#w1"
+                                    style="font-size: 20px; font-weight: 600; line-height: 1.5; padding-bottom: 5px; color: rgb(0, 0, 0); padding-left: 15px;"
+                                    onMouseOver="this.style.color='#777'"
+                                    onMouseOut="this.style.color='#000'">Merchandise</a>
+                                <div class="list-group list-group-flush overflow-hidden">
+                                    <li class="list-group-item"><a style="color: #aaa; font-weight: 200;"
+                                            onMouseOver="this.style.color='#000'" onMouseOut="this.style.color='#aaa'"
+                                            href="#w1">Highlight Collection</a></li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <a href="#w2" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Classic Collection</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="accordion accordion-flush" id="acc">
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header" id="bean"
+                                                            data-bs-toggle="collapse" data-bs-target="#hb"
+                                                            aria-expanded="false" aria-controls="hb">
+                                                            <div class="collapsed accordion-button p-0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="hb" class="list-group list-group-flush collapse" aria-labelledby="bean"
+                                            data-bs-parent="#acc">
+                                            <div class="list-group-item">
+                                                <a href="#w3" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Serveware</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w4" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Brewing Equipment</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w5" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Accessories</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <a href="#w6" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Collectible Collection</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="accordion accordion-flush" id="acc">
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header" id="bean"
+                                                            data-bs-toggle="collapse" data-bs-target="#hb1"
+                                                            aria-expanded="false" aria-controls="hb1">
+                                                            <div class="collapsed accordion-button p-0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="hb1" class="list-group list-group-flush collapse"
+                                            aria-labelledby="bean" data-bs-parent="#acc">
+                                            <div class="list-group-item">
+                                                <a href="#w7" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Thailand</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w8" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Bangkok</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w9" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Phuket</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w10" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Pattaya</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w11" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Muanjai</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w12" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Langsuan
+                                                </a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w13" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Exclusive at Starbucks Reserve®
+                                                    Chao Phraya Riverfront</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <a href="#w14" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Starbucks Reserve®
+                                                    Collection</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="accordion accordion-flush" id="acc">
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header" id="bean1"
+                                                            data-bs-toggle="collapse" data-bs-target="#pm"
+                                                            aria-expanded="false" aria-controls="bean1">
+                                                            <div class="collapsed accordion-button p-0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="pm" class="list-group list-group-flush collapse" aria-labelledby="bean"
+                                            data-bs-parent="#acc">
+                                            <div class="list-group-item">
+                                                <a href="#w15" href="cdc.html" style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Serveware</a>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <a href="#w16" href="tourist.html"
+                                                    style="color: #aaa; font-weight: 200;"
+                                                    onMouseOver="this.style.color='#000'"
+                                                    onMouseOut="this.style.color='#aaa'">Brewing Equipment</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div><br>
+                            <p style="font-size: 14px; font-weight: 250;">Price and product availability may vary in
+                                some stores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <!--------------------------------------------------- Merchandise Start----------------------------------------------------->
+                    <div class="row">
+                        <!---------------------------------------------------Highlight Collection Start----------------------------------------------------->
+                        <h4 id="w1">Highlight Collection</h4>
+                        <div id="carousel1" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerP1_Christmas_WebItem1-600x600.jpeg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Red Cup Mug 2021 (12oz.)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerP1_Christmas_WebItem2-600x600.jpeg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Red Cup Double Wall Mug
+                                                            2021 (12oz.)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>900 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerP1_Christmas_WebItem31-600x600.jpeg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Red Cup Coffee Canister
+                                                            (12oz.)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>600 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerP1_Christmas_WebItem11-600x600.jpeg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Red Cup Tumbler (12oz.)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>440 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerP1_Christmas_WebItem3-600x600.jpeg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Santa Bear Mug (3oz.)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>400 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerP1_Christmas_WebItem10-600x600.jpeg"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Glass Santa Bear Mug
+                                                            (10oz.)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>700 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Highlight Collection End----------------------------------------------------->
+
+                    <!---------------------------------------------------Classic Collection Start----------------------------------------------------->
+
+                    <div class="row">
+                        <h4 id="w2">Classic Collection</h4>
+                        <hr>
+                        <!---------------------------------------------------Serveware Start----------------------------------------------------->
+                        <h4 id="w3">Serveware</h4>
+                        <div id="carousel2" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Black-Matte-Mug-12-oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Black Matte Vintage Logo
+                                                            Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>500 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Black-Matte-Mug-16-oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Black Matte Vintage Logo
+                                                            Mug 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>600 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Double-Wall-Matte-Black-Mug-12-oz-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Double Walled Matte Black
+                                                            Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,000 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Black-Cold-cup1080-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Black Siren Cold Cup 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Black-Collection-1080-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Black with Siren Badge
+                                                            Tumbler 20oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Stainless-steel-white-with-green-lid-tumbler-12-oz-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Siren with
+                                                            Green Lid and Strap Tumbler 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Serveware End----------------------------------------------------->
+
+                    <!---------------------------------------------------Brewing Equipment Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w4">Brewing Equipment</h4>
+                        <div id="carousel3" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Coffee-Press-3-Cup-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Silver
+                                                            Coffee Press 3-Cup
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,350 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Stainless-steel-colombia-coffee-press-3-cups-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Columbia
+                                                            Coffee Press 3-Cup
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>2,500 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Stainless-steel-Espro-coffee-press-18-oz-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Espro
+                                                            Coffee Press Medium 18oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>5,800 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Espro-Travel-press-Black-12-oz-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Espro Travel Press
+                                                            Meteorite Black 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,800 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Coffee-Scoop-1080-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Coffee
+                                                            Scoop Clip 2 Tablespoon
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Hand-Grinder1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Hand Grinder by Rhinoware
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>2,200 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Brewing Equipment End----------------------------------------------------->
+
+                    <!---------------------------------------------------Accessories Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w5">Accessories</h4>
+                        <div id="carousel4" class="carousel slide" data-bs-ride="carousel" style="height: 450px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bearista-Black-Apron-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Bearista Bear Black Apron
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>650 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bearista-Green-Apron-1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Bearista Bear Green Apron
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>650 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/A11100910-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Reusable Foldable Straw
+                                                            with Case
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>250 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <a href="https://shopee.co.th/starbucks_official?smtt=9&utm_source=website"><img
+                                                    class="shadow-sm" src="img/buttonshoppe.png" width="50%"><br></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Accessories End----------------------------------------------------->
+                    <!---------------------------------------------------Classic Collection End----------------------------------------------------->
+
+                    <!---------------------------------------------------Collectible Collection Start----------------------------------------------------->
+
+                    <div class="row">
+                        <h4 id="w6">Collectible Collection</h4>
+                        <hr>
+                        <!---------------------------------------------------Thailand Start----------------------------------------------------->
+                        <h4 id="w7">Thailand</h4>
+                        <div id="carousel5" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Thailnad-mug-Small-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Thailand You Are Here Demi
+                                                            Mug 2oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Thailand-mug-big-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Thailand You Are Here Mug
+                                                            14oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>550 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/24.Thailand-Tumbler-1080-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Thailand
+                                                            You Are Here Tumbler 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,150 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Thailand-Bottle1080-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Thailand You are Here Glass
+                                                            Water Bottle 18.5oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>650 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Snow-Globe-Thailand1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Snow Globe Thailand
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Thailnad-mug-Small-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Thailand You Are Here Demi
+                                                            Mug 2oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel5"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel5" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel5" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Thailand End----------------------------------------------------->
+
+                    <!---------------------------------------------------Bangkok Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w8">Bangkok</h4>
+                        <div id="carousel6" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bangkok-white-Mug1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>BKK Relief Mug 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>520 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bangkok-Mug1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>BKK Night Sky Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bangkok-Tumbler1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel BKK Night
+                                                            Sky Tumbler 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bangkok-Layer-Tumbler1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>BKK Relief Layers Tumbler
+                                                            16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>500 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bangkok-white-Mug1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>BKK Relief Mug 16oz. .
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>520 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Bangkok-Mug1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>BKK Night Sky Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel6"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel6"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel6" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel6" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Bangkok End----------------------------------------------------->
+
+                    <!---------------------------------------------------Phuket Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w9">Phuket</h4>
+                        <div id="carousel7" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Phuket-mug-small-1-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Phuket You Are Here Demi
+                                                            Mug 2oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Phuket-mug-Big-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Phuket You Are Here Mug
+                                                            14oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>560 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Phuket-Mug1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Phuket Relief Mug 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>520 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Phuket-layer-Tumbler1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Phuket Relief Layers
+                                                            Tumbler 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>500 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Phuket-mug-small-1-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Phuket You Are Here Demi
+                                                            Mug 2oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Phuket-mug-Big-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Phuket You Are Here Mug
+                                                            14oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>560 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel7"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel7"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel7" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel7" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Phuket End----------------------------------------------------->
+
+                    <!---------------------------------------------------Pattaya Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w10">Pattaya</h4>
+                        <div id="carousel8" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Pattaya-mug-small-1-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Pattaya You Are Here Demi
+                                                            Mug 2oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Pattaya-mug-big-1-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Pattaya You Are Here Mug
+                                                            14oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>560 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><br><br>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel8" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Pattaya End----------------------------------------------------->
+
+                    <!---------------------------------------------------Muanjai Start----------------------------------------------------->
+
+                    <div class="row">
+                        <h4 id="w11">Muanjai</h4>
+                        <p style="font-size: 14px; font-weight: 100;">Inspired by Muan Jai™ Blend, this special
+                            collection is the pride of Starbucks Thailand. “Muan Jai” is the northern language means
+                            “wholehearted happiness”.<br><br>
+
+                            Starbucks® Muan Jai™ Blend is fairly traded and grown under shade trees. 5% of the coffee
+                            sales is donated to support northern coffee farmer communities in Thailand since 2003. </p>
+                        <div id="carousel9" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/aurora-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Aurora Pink Muanjai Mug
+                                                            12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/37.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Charm Beige Muanjai Tumbler
+                                                            12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>440 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Glass Laven Leaves Muanjai
+                                                            12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/39-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Elma Beige
+                                                            Muanjai Tumbler 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/aurora-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Aurora Pink Muanjai Mug
+                                                            12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>480 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/37.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Charm Beige Muanjai Tumbler
+                                                            12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>440 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel9"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel9"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel9" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel9" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Muanjai End----------------------------------------------------->
+
+                    <!---------------------------------------------------Langsuan Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w12">Langsuan</h4>
+                        <p style="font-size: 14px; font-weight: 100;">Starbucks Langsuan is the first Community Store
+                            out of the US and the 4th Starbucks Community Store in the world. The store is the company’s
+                            commitment to operate business under Starbucks Brand Promise to give back to the community.
+                            At this store, 10 Baht from every Starbucks beverage sold is donated to support the needs of
+                            northern coffee farmer communities in Thailand.</p>
+                        <div id="carousel10" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/40.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>White Glossy Rubber Wood Coaster Mug 14oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>980 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/41.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Matte Wood Decal Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>600 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/42.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Langsuan Gift Set 3oz. (2 pcs./set)
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>850 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/43.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>White Black Mug 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>700 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/44.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Matte Black with Brown Leather Band 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,150 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/45.-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Matte Gold with Black Leather Band 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,150 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel10"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel10"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel10" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carousel10" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Langsuan End----------------------------------------------------->
+
+                    <!---------------------------------------------------Exclusive at Starbucks Reserve® Chao Phraya Riverfront Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w13">Exclusive at Starbucks Reserve® Chao Phraya Riverfront</h4>
+                        <div id="carousel11" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Hill-Tribe-Muanjai-Mug-12oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Hill Tribe Muanjai Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>600 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Pink-Muanjai-Tumbler-12oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Pink Muanjai Tumbler 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Black-Quencher-Cold-Cup-20oz-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Black Quencher Cold Cup 20oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,300 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Hill-Tribe-Muanjai-Tumbler-12oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Hill Tribe Muanjai Tumbler 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Black-Water-Bottle-12oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Black Water Bottle 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,150 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/Create-Your-Own-Chao-Phraya-Tumbler-16oz-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Create Your Own Chao Phraya Tumbler 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>500 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel11"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel11"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel11" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel11" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------Exclusive at Starbucks Reserve® Chao Phraya Riverfront End----------------------------------------------------->
+                    <!---------------------------------------------------Collectible Collection End----------------------------------------------------->
+
+
+                    <!--------------------------------------------------- Starbucks Reserve® Collection Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w14">Starbucks Reserve® Collection</h4>
+                        <hr>
+                    <!--------------------------------------------------- Serveware Start----------------------------------------------------->
+                        <h4 id="w15">Serveware</h4>
+                        <div id="carousel12" class="carousel slide" data-bs-ride="carousel" style="height: 450px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/A11091384-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel At Home Green Tumbler 10oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>950 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <a href="https://shopee.co.th/starbucks_official?smtt=9&utm_source=website"><img
+                                                class="shadow-sm" src="img/buttonshoppe.png" width="50%"><br></a>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/A11091386-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Red Thermos 13.5oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,800 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <a href="https://shopee.co.th/starbucks_official?smtt=9&utm_source=website"><img
+                                                class="shadow-sm" src="img/buttonshoppe.png" width="50%"><br></a>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/A11097089-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Stainless Steel Blue Cold Cup 16oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,150 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <a href="https://shopee.co.th/starbucks_official?smtt=9&utm_source=website"><img
+                                                class="shadow-sm" src="img/buttonshoppe.png" width="50%"><br></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerReserveOnGreen_Item1-600x600.png" class="d-block"
+                                                        width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Ceramic Reserve Mug 3oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>450 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/MerReserveOnGreen_Item2-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Ceramic Reserve Mug 8oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>550 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big"
+                                                        src="img/item/MerReserveOnGreen_Item3-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Ceramic Reserve Mug 12oz.
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>650 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel12"
+                                data-bs-slide="prev">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel12"
+                                data-bs-slide="next">
+                                <i style="font-size: 36px; color:black;" class="fas fa-chevron-circle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel12" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel12" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------- Serveware End----------------------------------------------------->
+
+                    <!--------------------------------------------------- Brewing Equipment Start----------------------------------------------------->
+                    <div class="row">
+                        <h4 id="w16">Brewing Equipment</h4>
+                        <div id="carousel13" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="overflow-hidden" style="border-radius:10px;">
+                                                <a href="#"><img class="big" src="img/item/Pourover-Reserve1080-600x600.png"
+                                                        class="d-block" width="100%"><br></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 style="font-weight: bolder;"><strong>Pourover Reserve Black 4 Cup
+                                                        </strong>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6 style="font-weight: bolder;"><strong>1,150 Baht</strong>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><br><br>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="but1 rounded-pill px-3 float-end" style="font-size: 12px;"><strong>See
+                                    More</strong></button>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------- Brewing Equipment End----------------------------------------------------->
+
+                    <!--------------------------------------------------- Starbucks Reserve® Collection End----------------------------------------------------->
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <footer>
+            <div class="row row-cols-4" style="background-color: #f7f7f7;">
+                <div class="col pb-4 pt-4 d-flex justify-content-center">
+                    <div class="menu-container">
+                        <span class="title"><strong>ABOUT US</strong></span>
+                        <ul class="list-unstyled">
+                            <li><a class="link" href="heritage.html">Our Heritage</a></li>
+                            <li><a class="link" href="company.html">Our Company</a></li>
+                            <li><a class="link" href="responsibility.html">Responsibility</a></li>
+                            <li><a class="link" href="career.html">Career Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col pb-0 pt-4 d-flex justify-content-center">
+                    <div class="menu-container">
+                        <span class="title"><strong>COFFEE & TEA AT HOME</strong></span>
+                        <ul class="list-unstyled">
+                            <li><a class="link" href="story.html">Coffee Story</a></li>
+                            <li><a class="link" href="athome.html">Coffee & Tea at Home</a></li>
+                            <li><a class="link" href="howto.html">How to Brew</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col pb-0 pt-4 d-flex justify-content-center">
+                    <div class="menu-container">
+                        <ul class="list-unstyled">
+                            <li><a class="link" href="#">STARBUCKS REWARDS</a></li>
+                            <li><a class="link" href="#">PROMOTION</a></li>
+                            <li><a class="link" href="#">STARBUCKS CARD CORPORATE SALE</a></li>
+                            <li><a class="link" href="#">ADDITIONAL INFORMATION</a></li>
+                            <li><a class="link" href="#">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col pb-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="link"><img
+                                    src="img/us-18.png">&nbsp;&nbsp;English</a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <a href="#" class="link"><img src="img/th.png">&nbsp;&nbsp;ไทย</a>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width:100%; color:rgb(197, 196, 196);">
+            </div>
+            <div style="background-color: #f7f7f7;">
+                <div class="d-flex justify-content-end container" style="background-color: #f7f7f7; padding-left: 50%;">
+                    <div>
+                        <a href="https://www.facebook.com/StarbucksThailand/"><img class="pb-3"
+                                src="img/facebook_w-2.png" style="width:8%"></a>&nbsp;&nbsp;
+                        <a href="https://www.instagram.com/starbucksthailand/"><img class="pb-3" src="img/Instagram.png"
+                                style="width:8%"></a>&nbsp;&nbsp;
+                        <a href="https://page.line.me/853tzvmu?openQrModal=true"><img class="pb-3"
+                                src="img/LINE_APP.png" style="width:8%"></a>&nbsp;&nbsp;
+                        <a href="https://apps.apple.com/th/app/starbucks-thailand/id898062370"><img class="pb-3"
+                                src="img/app-store_tcm78-10560_w1024_n.png" style="width:26%"></a>&nbsp;&nbsp;
+                        <a href="https://play.google.com/store/apps/details?id=com.starbucks.thailand"><img class="pb-3"
+                                src="img/google-play_tcm78-10559_w1024_n.png" style="width:26%"></a>&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute-footer w-100" style="background-color: #5b5b5b; position: absolute;">
+                <div class="container text-center" style="padding: 10px 0 15px; font-size: .85em; overflow: hidden;">
+                    <div class="row flex-column-reverse flex-lg-row align-content-center">
+                        <div class="col-auto mt-4" style="padding-left: 18px;">
+                            <div class="menu-container align-self-baseline">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a class="link link_f" href="accessibility.html">WEB
+                                            ACCESSIBILITY</a></li>
+                                    <li class="list-inline-item"><a class="link link_f" href="privacy.html">PRIVACY
+                                            STATEMENT</a></li>
+                                    <li class="list-inline-item"><a class="link link_f" href="terms.html">TERMS OF
+                                            USE</a></li>
+                                    <li class="list-inline-item"><a class="link link_f" href="#">SITE MAP</a></li>
+                                    <li class="list-inline-item"><a class="link link_f" href="#">COOKIE
+                                            PREFERENCE</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col mt-4 text-center text-lg-end align-self-baseline"
+                            style="color: rgb(153, 153, 153); font-size: 14px; padding-right: 20px;">
+                            <span>©2021 Coffee Concepts Retail Co.,Ltd. All rights reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a class="scrolltop">
+            <img src="img/up.png" width="35px" alt="">
+        </a>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+<script>
+    $(".scrolltop").click(function () {
+        $("html, body").animate({ scrollTop: 0 });
+        return false;
+    });
+</script>
+
+</html>
